@@ -1,5 +1,6 @@
 import speedtest, csv
 import datetime
+from graph_maker import make_graph
 s = speedtest.Speedtest()
 
 def record():
@@ -10,7 +11,7 @@ def record():
     csv_writer.writeheader()
     start_day = datetime.date.today()
     while True:
-      time = datetime.datetime.now().strftime("%H:%M:%S")
+      time = datetime.datetime.now().strftime("%H:%M")
       print(time)
       speed = round((round(s.download()) / 1048576), 2)
       print(speed, "Mb/s")
@@ -18,6 +19,8 @@ def record():
       #if day has changed, i.e past midnight, new csv file begins
       #? maybe update this with generating graph then re-write?
       if datetime.date.today() != start_day:
+        speedcsv.close()
+        make_graph(start_day)
         record()
 
 record()
