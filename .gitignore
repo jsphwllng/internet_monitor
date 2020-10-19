@@ -1,7 +1,6 @@
 *.csv
 new-env
 __pycache__
-*.png
 client_secrets.json
 *.jpg
 *.svg
