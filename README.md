@@ -1,3 +1,4 @@
+![a robot with two wifi bars coming out of its antenna](https://raw.githubusercontent.com/jsphwllng/internet_monitor/master/image/internet_monitor.png "roboto")
 # A tool to monitor internet speeds then return them in a CSV format
 
 ## to do
