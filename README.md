@@ -17,13 +17,13 @@
 6. error handling
 
 ## installing and running
-*[generate your API key from here first](https://developers.google.com/drive/api/v3/quickstart/python#step_1_turn_on_the)
-
+* optional:
+  * [generate your API key from here first](https://developers.google.com/drive/api/v3/quickstart/python#step_1_turn_on_the)
 
 ```bash
 cd ~
 git clone git@github.com:jsphwllng/internet_monitor.git
-pip3 install requirements.txt
+pip3 install -r requirements.txt
 *touch client_secrets.json (and add the contents from the credentials.json)
 python3 monitor.py
 ```
