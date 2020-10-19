@@ -8,9 +8,9 @@ drive = GoogleDrive(gauth)
 
 def upload_to_drive(file):
   # path = r".."
-  print("1")
-  f = drive.CreateFile({'title': file})
-  print("2")
+  f = drive.CreateFile()
+
+  f.SetContentFile(file)
   f.Upload()
-  print("3")
+  print("file uploaded!")
   f = None

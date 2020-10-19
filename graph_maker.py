@@ -18,4 +18,4 @@ def make_graph(date):
   plt.ylabel('download speed')
   plt.title(f"Download speed for {date}")
   plt.legend()
-  plt.savefig(f'{date}_graph.png')
+  plt.savefig(f'{date}_graph.jpg')
