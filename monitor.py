@@ -21,7 +21,13 @@ def record():
       #when day changes stop writing, generate a graph, upload that graph to google drive and start again
         speedcsv.close()
         make_graph(start_day)
-        upload_to_drive(f"{start_day}" + "_graph.jpg")
-        record()
+        try:
+          upload_to_drive(f"{start_day}" + "_graph.jpg")
+          print("now uploaded to drive")
+        except:
+          print("API keys not correct - now saving to local device")
+          pass
+        finally:
+          record()
 
 record()

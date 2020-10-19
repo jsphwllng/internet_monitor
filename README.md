@@ -15,8 +15,13 @@
 4. benefits of a simple CSV over a database
 5. my internet is pretty inconsistent
 
-## installation
+## installing and running
+[generate your API key from here first](https://developers.google.com/drive/api/v3/quickstart/python#step_1_turn_on_the)
+
 ```bash
+cd ~
+git clone git@github.com:jsphwllng/internet_monitor.git
 pip3 install requirements.txt
-touch client_secrets.json (and get credentials from google drive)
+touch client_secrets.json (and add the contents from the credentials.json)
+python3 monitor.py
 ```
