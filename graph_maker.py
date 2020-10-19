@@ -12,7 +12,7 @@ def make_graph(date):
           x.append(str(row[0]))
           y.append(float(row[1]))
 
-  plt.figure(figsize=(10, 10))
+  plt.figure(figsize=(11, 11))
   plt.plot(x, y, label='Mb/s', color='r')
   plt.xlabel('time')
   plt.ylabel('download speed')
