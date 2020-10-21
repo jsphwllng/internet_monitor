@@ -1,6 +1,8 @@
 ![a robot with two wifi bars coming out of its antenna](https://raw.githubusercontent.com/jsphwllng/internet_monitor/master/image/internet_monitor.png "roboto")
 # A tool to monitor internet speeds and record them
 
+![a graph](https://raw.githubusercontent.com/jsphwllng/internet_monitor/master/image/2020-10-21_graph.jpg "graph")
+
 ## to do
 * <strike>monitor internet speed and write to a csv fille</strike>
 * write some analytics to return highest, average and lowest speeds
