@@ -6,3 +6,4 @@ client_secrets.json
 *.svg
 .vscode
 newenv
+!2020-10-21_graph.jpg
