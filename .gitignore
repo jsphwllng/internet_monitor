@@ -5,3 +5,4 @@ client_secrets.json
 *.jpg
 *.svg
 .vscode
+newenv
