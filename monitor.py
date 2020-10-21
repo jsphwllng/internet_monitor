@@ -2,6 +2,7 @@ import speedtest, csv
 import datetime
 from graph_maker import make_graph
 from drive_uploader import upload_to_drive
+import time
 
 s = speedtest.Speedtest()
 
@@ -13,10 +14,11 @@ def record():
     start_day = datetime.date.today()
     while True:
       #writes into the CSV file until the date changes
-      time = datetime.datetime.now().strftime("%H:%M")
+      time2 = datetime.datetime.now().strftime("%H:%M")
       speed = round((round(s.download()) / 1048576), 2)
-      csv_writer.writerow({'time': time, 'speed': speed})
-      print({'time': time, 'speed': speed}, "Mb/s")
+      csv_writer.writerow({'time': time2, 'speed': speed})
+      print({'time': time2, 'speed': speed}, "Mb/s")
+      time.sleep(61)
       if datetime.date.today() != start_day:
       #when day changes stop writing, generate a graph, upload that graph to google drive and start again
         speedcsv.close()
