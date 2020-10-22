@@ -3,7 +3,7 @@ new-env
 __pycache__
 client_secrets.json
 *.jpg
-*.svg
 .vscode
 newenv
+env
 !2020-10-21_graph.jpg

@@ -4,9 +4,9 @@ import matplotlib.ticker as ticker
 
 
 def make_graph(date):
-    x = [] #date
-    y = [] #download speed
-    z = [] #date
+    x = []  #date
+    y = []  #download speed
+    z = []  #date
     with open(f'{date}_speed.csv', 'r') as csvfile:
         plots = csv.reader(csvfile, delimiter=',')
         next(csvfile)
@@ -19,18 +19,22 @@ def make_graph(date):
     lowest_download_time = x[y.index(lowest_download)]
     lowest_upload = sorted(z)[0]
     lowest_upload_time = x[z.index(lowest_upload)]
+    #create the actual graph
     plt.figure(figsize=(90, 10))
     plt.plot(x, y, label='download', color='r')
     plt.plot(x, z, label='upload', color='b')
     plt.xlabel('time')
-    plt.xticks(rotation=90)
+    plt.xticks([])
     plt.ylabel('speed in Mb/s')
     plt.title(f"internet speed for {date}")
-    plt.annotate(f" the lowest download speed: {lowest_download} ast {lowest_download_time}.\nthe lowest upload speed: {lowest_upload} at {lowest_upload_time}\n\nI pay for 100 down and 40 up.",
-                 xy=(0.05, 0.95),
-                 xycoords='axes fraction')
+    #annotate what i am currently paying.
+    plt.annotate(
+        f"the lowest download speed: {lowest_download} at {lowest_download_time} Mb/s.\nthe lowest upload speed: {lowest_upload} at {lowest_upload_time} Mb/s.\n\nI pay for 100 down.",
+        xy=(0.05, 0.88),
+        xycoords='axes fraction')
+    #showing the level I am paying for.
+    plt.axhline(y=100, color='r', linestyle='--')
+    plt.axhline(y=40, color='b', linestyle='--')
+    plt.show()
     plt.legend()
     plt.savefig(f'{date}_graph.jpg', bbox_inches='tight')
-
-
-make_graph("2020-10-22")
