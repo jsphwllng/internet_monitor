@@ -19,3 +19,5 @@ def make_graph(date):
   plt.title(f"Download speed for {date}")
   plt.legend()
   plt.savefig(f'{date}_graph.jpg')
+
+make_graph("2020-10-19")
