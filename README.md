@@ -1,6 +1,8 @@
 ![a robot with two wifi bars coming out of its antenna](https://raw.githubusercontent.com/jsphwllng/internet_monitor/master/image/internet_monitor.png "roboto")
 # A tool to monitor internet speeds and record them
 
+![a graph](https://raw.githubusercontent.com/jsphwllng/internet_monitor/master/image/2020-10-21_graph.jpg "graph")
+
 ## to do
 * <strike>monitor internet speed and write to a csv fille</strike>
 * write some analytics to return highest, average and lowest speeds
@@ -17,13 +19,13 @@
 6. error handling
 
 ## installing and running
-*[generate your API key from here first](https://developers.google.com/drive/api/v3/quickstart/python#step_1_turn_on_the)
-
+* optional:
+  * [generate your API key from here first](https://developers.google.com/drive/api/v3/quickstart/python#step_1_turn_on_the)
 
 ```bash
 cd ~
 git clone git@github.com:jsphwllng/internet_monitor.git
-pip3 install requirements.txt
+pip3 install -r requirements.txt
 *touch client_secrets.json (and add the contents from the credentials.json)
 python3 monitor.py
 ```

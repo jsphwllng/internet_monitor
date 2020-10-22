@@ -5,3 +5,5 @@ client_secrets.json
 *.jpg
 *.svg
 .vscode
+newenv
+!2020-10-21_graph.jpg
