@@ -3,7 +3,7 @@ import csv
 import matplotlib.ticker as ticker
 
 
-def make_graph(date):
+def make_graph(date, download, upload):
     x = []  #date
     y = []  #download speed
     z = []  #date
@@ -29,12 +29,12 @@ def make_graph(date):
     plt.title(f"internet speed for {date}")
     #annotate what i am currently paying.
     plt.annotate(
-        f"the lowest download speed: {lowest_download} at {lowest_download_time} Mb/s.\nthe lowest upload speed: {lowest_upload} at {lowest_upload_time} Mb/s.\n\nI pay for 100 down.",
+        f"the lowest download speed: {lowest_download} at {lowest_download_time} Mb/s.\nthe lowest upload speed: {lowest_upload} at {lowest_upload_time} Mb/s.\n\nI pay for {download} download.",
         xy=(0.05, 0.88),
         xycoords='axes fraction')
     #showing the level I am paying for.
-    plt.axhline(y=100, color='r', linestyle='--')
-    plt.axhline(y=40, color='b', linestyle='--')
+    plt.axhline(y=int(download), color='r', linestyle='--')
+    plt.axhline(y=int(upload), color='b', linestyle='--')
     plt.show()
     plt.legend()
     plt.savefig(f'{date}_graph.jpg', bbox_inches='tight')

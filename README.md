@@ -12,7 +12,7 @@ cd ~
 git clone git@github.com:jsphwllng/internet_monitor.git
 pip3 install -r requirements.txt
 *touch client_secrets.json (and add the contents from the credentials.json)
-python3 monitor.py
+python3 application.py
 ```
 *if you don't want to upload your files to google drive then skip this step
 
