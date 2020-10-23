@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import csv
 import matplotlib.ticker as ticker
+from PIL import Image
 
 
 def make_graph(date, download, upload):
@@ -35,6 +36,6 @@ def make_graph(date, download, upload):
     #showing the level I am paying for.
     plt.axhline(y=int(download), color='r', linestyle='--')
     plt.axhline(y=int(upload), color='b', linestyle='--')
-    plt.show()
     plt.legend()
     plt.savefig(f'{date}_graph.jpg', bbox_inches='tight')
+    Image.open(f'{date}_graph.jpg').show()

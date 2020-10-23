@@ -19,7 +19,7 @@ def record(length, download, upload):
         while True:
             #writes into the CSV file until the time is completed changes
             if datetime.datetime.now() < completed_time:
-                time = datetime.datetime.now().strftime("%H:%M")
+                time = datetime.datetime.now().strftime("%H:%M:%S")
                 downspeed = round((round(s.download()) / 1048576), 2)
                 upspeed = round((round(s.upload()) / 1048576), 2)
                 csv_writer.writerow({'time': time, 'downspeed': downspeed, "upspeed": upspeed})
