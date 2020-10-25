@@ -14,4 +14,5 @@ def upload_to_drive(file):
   f = drive.CreateFile()
   f.SetContentFile(file)
   f.Upload()
+  #prevents a memory leak
   f = None
