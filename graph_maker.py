@@ -8,7 +8,8 @@ def make_graph(date, download, upload):
     x = []  #date
     y = []  #download speed
     z = []  #date
-    with open(f'{date}_speed.csv', 'r') as csvfile:
+    with open(f'{date}_speed.csv', 'r', newline='',
+              encoding='utf-8') as csvfile:
         plots = csv.reader(csvfile, delimiter=',')
         next(csvfile)
         for row in plots:

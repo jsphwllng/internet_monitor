@@ -9,7 +9,10 @@ s = speedtest.Speedtest()
 
 def record(length, download, upload):
     #create csv file with headers time and speed
-    with open(f'{datetime.date.today()}_speed.csv', mode='w') as speedcsv:
+    with open(f'{datetime.date.today()}_speed.csv',
+              mode='w',
+              newline='',
+              encoding='utf-8') as speedcsv:
         csv_writer = csv.DictWriter(speedcsv, fieldnames=['time', 'downspeed', 'upspeed'])
         csv_writer.writeheader()
         start_day = datetime.datetime.today()
