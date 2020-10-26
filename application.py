@@ -17,9 +17,9 @@ def ask_for(thing):
     while correct_input != True:
         answer = input(f"{thing}\n> ")
         try:
-            int(answer)
-            correct_input = True
-            return answer
+            if int(answer) and int(answer) > 0:
+                correct_input = True
+                return answer
         except ValueError:
             print(f"{answer} is not a number")
 
