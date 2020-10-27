@@ -32,11 +32,10 @@ def make_graph(date, download, upload):
     #annotate what i am currently paying.
     plt.annotate(
         f"the lowest download speed: {lowest_download} at {lowest_download_time} Mb/s.\nthe lowest upload speed: {lowest_upload} at {lowest_upload_time} Mb/s.\n\nI pay for {download} Mb/s download and {upload} Mb/s upload.",
-        xy=(0.05, 0.88),
+        xy=(0.07, 0.88),
         xycoords='axes fraction')
     #showing the level I am paying for.
     plt.axhline(y=int(download), color='r', linestyle='--')
     plt.axhline(y=int(upload), color='b', linestyle='--')
     plt.legend()
     plt.savefig(f'{date}_graph.jpg', bbox_inches='tight')
-    Image.open(f'{date}_graph.jpg').show()
