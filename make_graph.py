@@ -4,11 +4,7 @@ import matplotlib.ticker as ticker
 times = []
 download = []
 upload = []
-with open(
-        'test.csv',
-        'r',
-        newline='',
-) as csvfile:
+with open('test.csv', 'r') as csvfile:
     plots = csv.reader(csvfile, delimiter=',')
     next(csvfile)
     for row in plots:

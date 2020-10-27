@@ -31,7 +31,7 @@ def make_graph(date, download, upload):
     plt.title(f"internet speed for {date}")
     #annotate what i am currently paying.
     plt.annotate(
-        f"the lowest download speed: {lowest_download} at {lowest_download_time} Mb/s.\nthe lowest upload speed: {lowest_upload} at {lowest_upload_time} Mb/s.\n\nI pay for {download} download.",
+        f"the lowest download speed: {lowest_download} at {lowest_download_time} Mb/s.\nthe lowest upload speed: {lowest_upload} at {lowest_upload_time} Mb/s.\n\nI pay for {download} Mb/s download and {upload} Mb/s upload.",
         xy=(0.05, 0.88),
         xycoords='axes fraction')
     #showing the level I am paying for.
