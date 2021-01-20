@@ -10,6 +10,7 @@
 ```bash
 cd ~
 git clone git@github.com:jsphwllng/internet_monitor.git
+cd internet_monitor
 pip3 install -r requirements.txt
 *touch client_secrets.json (and add the contents from the credentials.json)
 python3 application.py
